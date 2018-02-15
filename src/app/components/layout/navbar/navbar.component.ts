@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  toggle = false;
+  toggleMenu = false;
   sidebar = false;
   constructor() { }
 
@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleNav() {
-    this.toggle = !this.toggle;
+    this.toggleMenu = !this.toggleMenu;
   }
 
   hideSidebar() {

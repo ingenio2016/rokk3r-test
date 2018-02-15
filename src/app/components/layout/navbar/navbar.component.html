@@ -15,21 +15,21 @@
     </div>
   </div>
   <div class="menu">
-    <div class="menu-items show" [ngClass]="{'toggle':toggle, 'slide-show':sidebar}">
+    <div class="menu-items show" [ngClass]="{'toggle':toggleMenu, 'slide-show':sidebar}">
       <div class="navigate">
         <p>NAVIGATE</p>
       </div>
       <div>
         <ul>
-          <li class="analytics" routerLinkActive="active" [routerLink] = "['dashboard']"><a href="#"><p>Analytics</p></a></li>
-          <li class="news" routerLinkActive="active" [routerLink] = "['news']"><a href="#"><p>News</p></a></li>
-          <li class="board" routerLinkActive="active"><a href="#"><p>Board Brief</p></a></li>
-          <li class="brief" routerLinkActive="active"><a href="#"><p>Briefcase</p></a></li>
+          <li class="analytics" routerLinkActive="active" [routerLink] = "['dashboard']"><p>Analytics</p></li>
+          <li class="news" routerLinkActive="active" [routerLink] = "['news']"><p>News</p></li>
+          <li class="board" routerLinkActive="active"><p>Board Brief</p></li>
+          <li class="brief" routerLinkActive="active"><p>Briefcase</p></li>
         </ul>
       </div>
       <div class="close-menu">
         <ul>
-          <li class="close-menu" routerLinkActive="active" (click)="hideSidebar()"><a href="#"><p>Close Menu</p></a></li>
+          <li class="close-menu" routerLinkActive="active" (click)="hideSidebar()"><p>Close Menu</p></li>
         </ul>
       </div>
     </div>

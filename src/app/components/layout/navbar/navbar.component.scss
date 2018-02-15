@@ -79,10 +79,10 @@ div.page {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-around;
+      transition: display 2s;
       &.toggle {
         display: none;
-        animation-name: example;
-        animation-duration: 4s;
+        transition: display 2s;
       };
       .navigate{
         padding: 25px 20px 5px 20px;
@@ -100,13 +100,10 @@ div.page {
         li{
           padding: 15px 55px;
           margin: 0;
-          a{
-            color: #FFF;
-            text-decoration: none;
-            p {
+          p {
+              color: #FFF;
               padding: 0;
               margin: 0;
-            }
           };
           &.analytics{
             background: url("../../../../assets/img/analitycs.png") 5% 50% no-repeat;
@@ -161,16 +158,18 @@ div.page {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        transition: flex .5s;
+        transition: flex .2s;
         &.slide-show{
           flex: .1;
-          transition: flex .5s;
+          transition: flex .2s;
           div.navigate {
             display: none
           };
           div ul li {
             padding: 25px;
-            a p {
+            border-style: none;
+            p {
+                color: #FFF;
                 display: none;
             };
             &.analytics{
