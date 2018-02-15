@@ -1,0 +1,221 @@
+div.page {
+  padding:0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  div.header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    div.logo-menu {
+      margin: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      background: #1E2025;
+      padding: 1em;
+      div.icon-menu {
+        span{
+          display: block;
+          width: 30px;
+          height: 4px;
+          background: #FFF;
+          margin: 5px 0;
+        }
+      }
+    };
+    div.user {
+      margin: 0;
+      background: #2F323A;
+      padding: .5em 1em;
+      p {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          text-decoration: none;
+          color: #FFF;
+        }
+      };
+      &.toggle {
+        display: none;
+      };
+      @media (min-width: 768px) {
+        &.show {
+          display: block;
+        };
+      }
+    }
+    @media (min-width: 768px) {
+      flex-flow: row nowrap;
+      background: #2F323A;
+      justify-content: space-between;
+      div.logo-menu {
+        padding: 0;
+        margin: 0;
+        width: 250px;
+        padding: 1em 0;
+        flex: 1;
+        justify-content: center;
+        div.icon-menu {
+          display: none;
+        }
+      };
+      div.user {
+        padding-left: 15px;
+        flex: 3;
+      }
+    }
+  };
+  div.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background: #2F323A;
+    div.menu-items {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      &.toggle {
+        display: none;
+        animation-name: example;
+        animation-duration: 4s;
+      };
+      .navigate{
+        padding: 25px 20px 5px 20px;
+        p{
+          margin: 0;
+          padding-bottom: 6px;
+          color: #545454;
+          border-bottom: 1px solid #545454;
+        }
+      }
+      ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+          padding: 15px 55px;
+          margin: 0;
+          a{
+            color: #FFF;
+            text-decoration: none;
+            p {
+              padding: 0;
+              margin: 0;
+            }
+          };
+          &.analytics{
+            background: url("../../../../assets/img/analitycs.png") 5% 50% no-repeat;
+          }
+          &.analytics:hover{
+            background-color: #1E2025;
+          }
+          &.news{
+            background: url("../../../../assets/img/newspaper-o.png") 5% 50% no-repeat;
+          }
+          &.news:hover{
+            background-color: #1E2025;
+          }
+          &.board{
+            background: url("../../../../assets/img/board-brief.png") 5% 50% no-repeat;
+          }
+          &.board:hover{
+            background-color: #1E2025;
+          }
+          &.brief{
+             background: url("../../../../assets/img/briefcase.png") 5% 50% no-repeat;
+           }
+          &.brief:hover{
+            background-color: #1E2025;
+          }
+          &.close-menu{
+            background: url("../../../../assets/img/angle.png") 5% 50% no-repeat;
+          }
+          &.close-menu:hover{
+            background-color: #1E2025;
+          }
+          &.active{
+            background-color: #1E2025;
+          }
+        };
+      };
+      @media (min-width: 768px) {
+        &.show {
+          display: block;
+        };
+      }
+    };
+    div.content{
+      background: #f1f1f1;
+      padding: 15px;
+    };
+    @media (min-width: 768px) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      div.menu-items {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: flex .5s;
+        &.slide-show{
+          flex: .1;
+          transition: flex .5s;
+          div.navigate {
+            display: none
+          };
+          div ul li {
+            padding: 25px;
+            a p {
+                display: none;
+            };
+            &.analytics{
+              background: url("../../../../assets/img/analitycs.png") 50% 50% no-repeat;
+            }
+            &.analytics:hover{
+              background-color: #1E2025;
+            }
+            &.news{
+              background: url("../../../../assets/img/newspaper-o.png") 50% 50% no-repeat;
+            }
+            &.news:hover{
+              background-color: #1E2025;
+            }
+            &.board{
+              background: url("../../../../assets/img/board-brief.png") 50% 50% no-repeat;
+            }
+            &.board:hover{
+              background-color: #1E2025;
+            }
+            &.brief{
+              background: url("../../../../assets/img/briefcase.png") 50% 50% no-repeat;
+            }
+            &.brief:hover{
+              background-color: #1E2025;
+            }
+            &.close-menu{
+              background: url("../../../../assets/img/angle.png") 50% 50% no-repeat;
+              transform: rotate(-180deg);
+            }
+            &.close-menu:hover{
+              background-color: #1E2025;
+            }
+            &.active{
+              background-color: #1E2025;
+            }
+          }
+        }
+      }
+      div.content {
+        flex: 3
+      }
+    }
+  };
+  @media (min-width: 768px) {
+    flex-flow: column nowrap;
+  }
+}

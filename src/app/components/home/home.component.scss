@@ -1,0 +1,26 @@
+div.line-chart{
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: 50px;
+}
+div.bar-chart{
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: 50px;
+}
+
+div.donut-chart{
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  div.second-line-charts {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}

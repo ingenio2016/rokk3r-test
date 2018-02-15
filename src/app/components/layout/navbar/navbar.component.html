@@ -1,0 +1,42 @@
+<div class="page">
+  <div class="header">
+    <div class="logo-menu">
+      <div class="logo">
+        <img src="../../../../assets/img/logo.png" alt="">
+      </div>
+      <div class="icon-menu" (click)="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="user show" [ngClass]="toggle">
+      <p><a href="#">Admin Name <span class="img"><img src="../../../../assets/img/shape.png" alt=""></span></a></p>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="menu-items show" [ngClass]="{'toggle':toggle, 'slide-show':sidebar}">
+      <div class="navigate">
+        <p>NAVIGATE</p>
+      </div>
+      <div>
+        <ul>
+          <li class="analytics" routerLinkActive="active" [routerLink] = "['dashboard']"><a href="#"><p>Analytics</p></a></li>
+          <li class="news" routerLinkActive="active" [routerLink] = "['news']"><a href="#"><p>News</p></a></li>
+          <li class="board" routerLinkActive="active"><a href="#"><p>Board Brief</p></a></li>
+          <li class="brief" routerLinkActive="active"><a href="#"><p>Briefcase</p></a></li>
+        </ul>
+      </div>
+      <div class="close-menu">
+        <ul>
+          <li class="close-menu" routerLinkActive="active" (click)="hideSidebar()"><a href="#"><p>Close Menu</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content bounceInDown">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

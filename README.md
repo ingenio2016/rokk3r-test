@@ -1,1 +1,25 @@
-# rokk3r-test
+# FrontTest
+
+#Steps to run the application
+
+1. Necesary installs
+
+  install node version 8.9.4 or higher and npm version 5.6.0 or higher from https://nodejs.org/es/download/
+
+2. Set up the Development Environment
+
+  npm install -g @angular/cli
+
+3. Create a Folder and clone the project from GitHub
+
+  https://github.com/ingenio2016/rokk3r-test.git
+
+4. Navigate from the folder project
+
+  cd rokk3r-test
+
+5. run yarn
+
+6. run ng serve
+
+7. open http://localhost:4200
