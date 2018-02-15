@@ -10,7 +10,7 @@ import { ChartService, Activity } from '../../providers/chart.service';
 })
 export class HomeComponent implements OnInit {
   categories = [];
-
+  donutSeries = [];
   // Charts Series
   series = [
     { name: 'Calle 85', data: [] },
@@ -132,7 +132,7 @@ export class HomeComponent implements OnInit {
   constructor( private _chartService: ChartService ) { }
 
   ngOnInit() {
-    this.subscription = Observable.interval(5000).subscribe(x => {
+    this.subscription = Observable.interval(10000).subscribe(x => {
       this.getDataFromJson();
     });
   }
@@ -143,7 +143,7 @@ export class HomeComponent implements OnInit {
       const time = this.activities[0].data.time;
       this.categories.push(this.formatDate(time));
       this.activities.forEach( (zone, index) => {
-        this.add(zone.data, index);
+        this.add(zone, index);
       });
     });
   }
@@ -154,7 +154,8 @@ export class HomeComponent implements OnInit {
   }
 
   add(data , index: number) {
-    this.lineChart.addPoint(data.speed, index);
-    this.barChart.addPoint(data.count, index);
+    this.lineChart.addPoint(data.data.speed, index);
+    this.barChart.addPoint(data.data.count, index);
   }
+
 }
